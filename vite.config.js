@@ -13,9 +13,9 @@ export default defineConfig({
         rewrite: (path) => path.replace(/^\/api/, '')
       }
     },
-    host: '0.0.0.0', // O la IP específica que quieras
-    port: 5173, // Puedes cambiarlo si es necesario
-    strictPort: true, // Para asegurarte de que usa ese puerto
-    allowedHosts: ['ec2-3-95-215-40.compute-1.amazonaws.com']
+    host: '0.0.0.0', // Permite conexiones externas
+    port: 5173, // Usa el puerto especificado
+    strictPort: true, // Asegura que se usa el puerto definido
+    cors: true // Habilita CORS para evitar bloqueos
   }
 })
