@@ -2,14 +2,14 @@ import UserList from "../components/UserList";
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex flex-col items-center justify-start py-12 px-4 sm:px-6 lg:px-8">
-      {/* Header con logo y descripción */}
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-700 flex flex-col items-center justify-start py-12 px-4 sm:px-6 lg:px-8">
+      {/* Encabezado con logo y descripción */}
       <div className="text-center max-w-2xl mb-10">
         <div className="flex justify-center mb-4">
-          <div className="bg-indigo-600 p-3 rounded-lg shadow-md">
+          <div className="bg-yellow-500 p-3 rounded-lg shadow-md">
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
-              className="h-12 w-12 text-white" 
+              className="h-12 w-12 text-black" 
               fill="none" 
               viewBox="0 0 24 24" 
               stroke="currentColor"
@@ -24,37 +24,33 @@ const Home = () => {
           </div>
         </div>
         
-        <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
-          Sakila Movie Rentals
+        <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-4">
+          Sakila Movie Hub
         </h1>
         
-        <p className="text-lg text-gray-600 leading-relaxed">
-          Selecciona tu perfil de usuario para comenzar a explorar nuestro catálogo 
-          de películas. Disfruta de alquileres instantáneos y descubre los últimos 
-          éxitos cinematográficos.
+        <p className="text-lg text-gray-300 leading-relaxed">
+          Accede a tu perfil y descubre un mundo de películas al alcance de un clic. 
+          Disfruta de los últimos estrenos y clásicos inolvidables.
         </p>
       </div>
       
       {/* Tarjeta de selección de usuario */}
-      <div className="w-full max-w-md bg-white shadow-xl rounded-lg overflow-hidden">
-        <div className="bg-indigo-600 px-6 py-4">
-          <h2 className="text-xl font-semibold text-white">
-            Selecciona tu usuario
+      <div className="w-full max-w-md bg-gray-800 shadow-2xl rounded-lg overflow-hidden">
+        <div className="bg-yellow-500 px-6 py-4">
+          <h2 className="text-xl font-semibold text-gray-900 text-center">
+            Elige tu perfil
           </h2>
         </div>
         
         <div className="p-6">
           <UserList />
-          
-          <div className="mt-6 text-center">
-          </div>
         </div>
       </div>
       
-      {/* Footer simple */}
+      {/* Footer */}
       <div className="mt-12 text-center">
-        <p className="text-sm text-gray-500">
-          © {new Date().getFullYear()} Sakila Movies. Todos los derechos reservados.
+        <p className="text-sm text-gray-400">
+          © {new Date().getFullYear()} Sakila Movie Hub. Todos los derechos reservados.
         </p>
       </div>
     </div>
