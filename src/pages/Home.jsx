@@ -2,14 +2,14 @@ import UserList from "../components/UserList";
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-gray-900 text-white flex flex-col justify-between py-8 px-4 sm:px-10">
-      {/* Header */}
-      <header className="flex items-center justify-between max-w-6xl mx-auto mb-10">
-        <div className="flex items-center space-x-4">
-          <div className="bg-indigo-500 p-2 rounded-md shadow-lg">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex flex-col items-center justify-start py-12 px-4 sm:px-6 lg:px-8">
+      {/* Header con logo y descripción */}
+      <div className="text-center max-w-2xl mb-10">
+        <div className="flex justify-center mb-4">
+          <div className="bg-indigo-600 p-3 rounded-lg shadow-md">
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
-              className="h-10 w-10 text-white" 
+              className="h-12 w-12 text-white" 
               fill="none" 
               viewBox="0 0 24 24" 
               stroke="currentColor"
@@ -22,42 +22,41 @@ const Home = () => {
               />
             </svg>
           </div>
-          <div>
-            <h1 className="text-2xl font-bold">Sakila Movie Rentals</h1>
-            <p className="text-sm text-gray-300">Accede a miles de películas al instante</p>
+        </div>
+        
+        <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
+          Sakila Movie Rentals
+        </h1>
+        
+        <p className="text-lg text-gray-600 leading-relaxed">
+          Selecciona tu perfil de usuario para comenzar a explorar nuestro catálogo 
+          de películas. Disfruta de alquileres instantáneos y descubre los últimos 
+          éxitos cinematográficos.
+        </p>
+      </div>
+      
+      {/* Tarjeta de selección de usuario */}
+      <div className="w-full max-w-md bg-white shadow-xl rounded-lg overflow-hidden">
+        <div className="bg-indigo-600 px-6 py-4">
+          <h2 className="text-xl font-semibold text-white">
+            Selecciona tu usuario
+          </h2>
+        </div>
+        
+        <div className="p-6">
+          <UserList />
+          
+          <div className="mt-6 text-center">
           </div>
         </div>
-      </header>
-
-      {/* Main content */}
-      <main className="flex flex-col md:flex-row items-center justify-center gap-10 max-w-6xl mx-auto">
-        {/* Descripción */}
-        <section className="md:w-1/2 text-center md:text-left space-y-4">
-          <h2 className="text-3xl font-semibold">¡Bienvenido!</h2>
-          <p className="text-lg text-gray-300">
-            Selecciona tu perfil de usuario para comenzar a explorar nuestro catálogo 
-            de películas. Disfruta de alquileres instantáneos y descubre los últimos 
-            éxitos cinematográficos.
-          </p>
-        </section>
-
-        {/* Tarjeta de selección de usuario */}
-        <section className="w-full md:w-1/2 bg-gray-800 rounded-xl shadow-xl">
-          <div className="bg-indigo-600 px-6 py-4 rounded-t-xl">
-            <h2 className="text-lg font-medium text-white">
-              Selecciona tu usuario
-            </h2>
-          </div>
-          <div className="p-6">
-            <UserList />
-          </div>
-        </section>
-      </main>
-
-      {/* Footer */}
-      <footer className="mt-12 text-center text-sm text-gray-500">
-        © {new Date().getFullYear()} Sakila Movies. Todos los derechos reservados.
-      </footer>
+      </div>
+      
+      {/* Footer simple */}
+      <div className="mt-12 text-center">
+        <p className="text-sm text-gray-500">
+          © {new Date().getFullYear()} Sakila Movies. Todos los derechos reservados.
+        </p>
+      </div>
     </div>
   );
 };
